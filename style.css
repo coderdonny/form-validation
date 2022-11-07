@@ -1,0 +1,36 @@
+body {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+}
+
+input {
+	border-style: none;
+	background-color: rgb(242, 242, 242);
+	height: 1.5rem;
+	width: 250px;
+	border-radius: 1rem;
+	padding-left: 1rem;
+}
+
+.form-row {
+	display: flex;
+	justify-content: space-between;
+}
+
+label {
+	align-self: flex-end;
+}
+
+button {
+	margin-top: 1rem;
+	border-style: none;
+	border-radius: 1rem;
+	padding: 10px 0px;
+}
