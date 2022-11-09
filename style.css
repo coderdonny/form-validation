@@ -10,22 +10,31 @@ form {
 	width: 400px;
 }
 
-input {
+input,
+select {
 	border-style: none;
 	background-color: rgb(242, 242, 242);
 	height: 1.5rem;
-	width: 250px;
-	border-radius: 1rem;
-	padding-left: 1rem;
+	width: 100%;
+	/* border-radius: 1rem; */
+	padding-left: 0.5rem;
+	/* border-radius: 1rem 1rem 0 0; */
+}
+
+select {
+	width: 412px;
 }
 
 .form-row {
 	display: flex;
 	justify-content: space-between;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 label {
-	align-self: flex-end;
+	align-self: flex-start;
 }
 
 button {
@@ -33,4 +42,45 @@ button {
 	border-style: none;
 	border-radius: 1rem;
 	padding: 10px 0px;
+	cursor: pointer;
+	width: 100%;
+}
+
+button:hover {
+	background-color: rgb(207, 207, 207);
+}
+
+/* input:invalid {
+	background-color: rgba(255, 0, 0, 0.166);
+}
+input:valid {
+	background-color: rgba(0, 128, 0, 0.171);
+} */
+
+input:invalid {
+	border-color: #900;
+	background-color: #fdd;
+}
+
+input:focus:invalid {
+	outline: none;
+}
+
+/* This is the style of our error messages */
+.error {
+	width: 100%;
+	padding: 0;
+
+	font-size: 80%;
+	color: white;
+	background-color: #900;
+	border-radius: 0 0 1rem 1rem;
+	padding-left: 1rem;
+
+	box-sizing: border-box;
+}
+
+.error.active {
+	padding: 0.3em;
+	padding-left: 1rem;
 }
